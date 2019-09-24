@@ -1,4 +1,5 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
@@ -7,7 +8,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-//        applicationId "cn.com.bamboo.esay_common"
+        applicationId "cn.com.bamboo.esay_common"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -42,11 +43,11 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:1.1.0"
 //    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion"
 //    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    implementation'com.google.android.material:material:1.0.0'
-    implementation "org.jetbrains.anko:anko-commons:0.10.8"
+    api 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    api'com.google.android.material:material:1.0.0'
+    api "org.jetbrains.anko:anko-commons:0.10.8"
 
     //fragmentation
-    implementation 'me.yokeyword:fragmentationx:1.0.1'
+    api 'me.yokeyword:fragmentationx:1.0.1'
 
 }
