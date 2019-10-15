@@ -1,13 +1,12 @@
 package cn.com.edu.hnzikao.kotlin.base
 
-import android.app.Application
 import android.content.Context
 import android.text.TextUtils
 import android.util.ArrayMap
 import androidx.lifecycle.*
 import java.lang.ref.WeakReference
 
-open class BaseViewModel(application: Application) : AndroidViewModel(application),
+open class BaseViewModel : ViewModel(),
     LifecycleObserver {
     var contextWeakReference: WeakReference<Context>? = null
     var startActivity = MutableLiveData<Map<String, Any>>()

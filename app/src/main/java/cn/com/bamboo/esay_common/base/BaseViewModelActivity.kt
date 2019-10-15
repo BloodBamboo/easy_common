@@ -50,7 +50,6 @@ abstract class BaseViewModelActivity<V : ViewDataBinding, VM : BaseViewModel> : 
             return
         }
         viewModel = createViewModel<ViewModel>(this, modelClass) as VM
-
         //关联ViewModel
         binding.setVariable(viewModelId, viewModel)
         //让ViewModel拥有View的生命周期感应
