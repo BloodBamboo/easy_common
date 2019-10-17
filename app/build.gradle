@@ -48,7 +48,8 @@ dependencies {
     api 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     api'com.google.android.material:material:1.0.0'
     api "org.jetbrains.anko:anko-commons:0.10.8"
-
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'io.reactivex.rxjava2:rxjava:2.2.13'
     //fragmentation
     api 'me.yokeyword:fragmentationx:1.0.1'
 

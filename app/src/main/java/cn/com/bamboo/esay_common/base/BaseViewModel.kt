@@ -5,10 +5,13 @@ import android.content.Context
 import android.text.TextUtils
 import android.util.ArrayMap
 import androidx.lifecycle.*
+import io.reactivex.disposables.CompositeDisposable
 import java.lang.ref.WeakReference
 
 open class BaseViewModel(application: Application) : AndroidViewModel(application),
     LifecycleObserver {
+    protected val subscriptions: CompositeDisposable = CompositeDisposable()
+
     var contextWeakReference: WeakReference<Context>? = null
     var startActivity = MutableLiveData<Map<String, Any>>()
 
@@ -29,6 +32,7 @@ open class BaseViewModel(application: Application) : AndroidViewModel(applicatio
     protected open fun onDestroy() {
         contextWeakReference?.clear()
         contextWeakReference = null
+        subscriptions.clear()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
