@@ -4,12 +4,12 @@ import android.Manifest
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cn.com.bamboo.esay_common.help.Permission4MultipleHelp
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_common.*
 
 class SecondActivity:AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_common)
         text.setOnClickListener {
             Permission4MultipleHelp
                 .request(

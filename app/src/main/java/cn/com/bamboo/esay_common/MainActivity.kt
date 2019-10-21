@@ -10,8 +10,6 @@ import org.jetbrains.anko.toast
 
 class MainActivity : BaseKotlinActivity() {
 
-    var i = 1
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_common)
