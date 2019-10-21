@@ -1,4 +1,4 @@
-package cn.com.bamboo.esay_common.help
+package cn.com.bamboo.easy_common.help
 
 import android.content.pm.PackageManager
 import android.os.Build

@@ -1,9 +1,9 @@
-package cn.com.bamboo.esay_common
+package cn.com.bamboo.easy_common
 
 import android.Manifest
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import cn.com.bamboo.esay_common.help.Permission4MultipleHelp
+import cn.com.bamboo.easy_common.help.Permission4MultipleHelp
 import kotlinx.android.synthetic.main.activity_common.*
 
 class SecondActivity:AppCompatActivity() {

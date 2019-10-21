@@ -1,21 +1,13 @@
 package cn.com.edu.hnzikao.kotlin.base
 
-import android.content.pm.ActivityInfo
-import android.os.Bundle
 import android.widget.TextView
-import androidx.appcompat.widget.Toolbar
-import cn.com.bamboo.esay_common.R
-import me.yokeyword.fragmentation.SupportActivity
+import android.widget.Toolbar
+import cn.com.bamboo.easy_common.R
+import me.yokeyword.fragmentation.SupportFragment
 
-open class BaseKotlinActivity : SupportActivity() {
+
+open class BaseKotlinFragment : SupportFragment() {
     protected var toolbar: Toolbar? = null
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        window.setBackgroundDrawable(null)
-    }
 
     /**
      * 不能把toolbar设置到actionbar上,不然返回失败得使用actionbar的返回事件
@@ -28,7 +20,7 @@ open class BaseKotlinActivity : SupportActivity() {
         iconId: Int = R.mipmap.ic_arrow_back_white,
         listener: (() -> Unit)? = null
     ) {
-        this.toolbar = findViewById(R.id.toolbar)
+        this.toolbar = view?.findViewById(R.id.toolbar)
         if (toolbar != null) {
             var titleTextView: TextView? = toolbar?.findViewById(R.id.toolbar_title)
             if (titleTextView == null) {
@@ -37,13 +29,13 @@ open class BaseKotlinActivity : SupportActivity() {
                 titleTextView.setText(title)
             }
 
-            toolbar?.setContentInsetStartWithNavigation(0)
+//            toolbar?.setContentInsetStartWithNavigation(0)
             toolbar?.setNavigationIcon(iconId)
-            toolbar?.setNavigationOnClickListener { v ->
+            toolbar?.setNavigationOnClickListener {
                 if (listener != null) {
                     listener()
                 } else {
-                    this@BaseKotlinActivity.finish()
+                    activity?.finish()
                 }
             }
         }

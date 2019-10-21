@@ -1,4 +1,4 @@
-package cn.com.bamboo.esay_common
+package cn.com.bamboo.easy_common
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

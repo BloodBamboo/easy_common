@@ -8,7 +8,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-//        applicationId "cn.com.bamboo.esay_common"
+//        applicationId "cn.com.bamboo.easy_common"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

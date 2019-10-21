@@ -1,4 +1,4 @@
-package cn.com.bamboo.esay_common.util
+package cn.com.bamboo.easy_common.util
 
 import io.reactivex.*
 import io.reactivex.android.schedulers.AndroidSchedulers

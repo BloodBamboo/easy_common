@@ -1,9 +1,8 @@
-package cn.com.bamboo.esay_common
+package cn.com.bamboo.easy_common
 
 import org.junit.Test
 
 import org.junit.Assert.*
-import java.util.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
