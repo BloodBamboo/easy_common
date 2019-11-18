@@ -52,5 +52,6 @@ dependencies {
     api 'io.reactivex.rxjava2:rxjava:2.2.13'
     //fragmentation
     api 'me.yokeyword:fragmentationx:1.0.1'
+    api 'com.google.code.gson:gson:2.8.6'
 
 }

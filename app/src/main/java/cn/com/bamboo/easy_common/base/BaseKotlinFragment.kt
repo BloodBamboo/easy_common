@@ -1,7 +1,7 @@
 package cn.com.edu.hnzikao.kotlin.base
 
 import android.widget.TextView
-import android.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import cn.com.bamboo.easy_common.R
 import me.yokeyword.fragmentation.SupportFragment
 
