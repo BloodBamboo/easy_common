@@ -1,8 +1,9 @@
-package cn.com.bamboo.easy_common
+package cn.com.bamboo.easy_common.cn.com.bamboo.easy_common
 
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
+import cn.com.bamboo.easy_common.R
 import cn.com.bamboo.easy_common.help.Permission4MultipleHelp
 import cn.com.edu.hnzikao.kotlin.base.BaseKotlinActivity
 import kotlinx.android.synthetic.main.activity_common.*
@@ -19,7 +20,10 @@ class MainActivity : BaseKotlinActivity() {
                         startActivity(Intent(this, SecondActivity::class.java))
         }
         test()
-        supportFragmentManager.beginTransaction().add(R.id.fragment, TestFragment())
+        supportFragmentManager.beginTransaction().add(
+            R.id.fragment,
+            TestFragment()
+        )
             .commit()
     }
 

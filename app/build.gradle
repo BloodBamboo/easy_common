@@ -1,5 +1,10 @@
-//apply plugin: 'com.android.application'
-apply plugin: 'com.android.library'
+def isModel = false
+
+if (isModel) {
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
+}
 
 apply plugin: 'kotlin-android'
 
@@ -8,7 +13,9 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-//        applicationId "cn.com.bamboo.easy_common"
+        if (isModel) {
+            applicationId "cn.com.bamboo.easy_common"
+        }
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -28,6 +35,15 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            if (isModel) {
+                java.srcDirs = ['src/main/java', 'src/main/model/java']
+                manifest.srcFile 'src/main/model/AndroidManifest.xml'
+            }
+        }
     }
 }
 
@@ -53,5 +69,4 @@ dependencies {
     //fragmentation
     api 'me.yokeyword:fragmentationx:1.0.1'
     api 'com.google.code.gson:gson:2.8.6'
-
 }
